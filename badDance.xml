@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://godzynskyi.com/defaultNameSpaceDance"
+    xmlns:ns1="http://godzynskyi.com/dancers"
+    xsi:schemaLocation="http://godzynskyi.com/defaultNameSpaceDance dance.xsd">
+    <performance number="1" title="Fly Me To The Moon">
+        <typ>Swing</typ>
+        <scene>hall</scene>
+        <numberOfDancers>group</numberOfDancers>
+        <music>phonogram</music>
+        <dancers>
+            <ns1:person>
+                <ns1:name>Ivan</ns1:name>
+                <ns1:age>28</ns1:age>
+                <ns1:experience>5</ns1:experience>
+            </ns1:person>
+            <ns1:person>
+                <ns1:name>Anna</ns1:name>
+                <ns1:age>29</ns1:age>
+                <ns1:experience>1</ns1:experience>
+            </ns1:person>
+            <ns1:group name="todes">
+                <ns1:person>
+                    <ns1:name>first</ns1:name>
+                    <ns1:age>26</ns1:age>
+                    <ns1:experience>2</ns1:experience>
+                </ns1:person>
+                <ns1:person>
+                    <ns1:name>second</ns1:name>
+                    <ns1:age>25</ns1:age>
+                    <ns1:experience>3</ns1:experience>
+                </ns1:person>
+            </ns1:group>
+        </dancers>
+    </performance>
+    <performance number="5">
+        <type>Boogie</type>
+        <scene>open air</scene>
+        <numberOfDancers>pair</numberOfDancers>
+        <music>phonogram</music>
+        <dancers>
+            <ns1:person>
+                <ns1:name>Maksim</ns1:name>
+                <ns1:age>28</ns1:age>
+                <ns1:experience>8</ns1:experience>
+            </ns1:person>
+            <ns1:person>
+                <ns1:name>Vera</ns1:name>
+                <ns1:age>22</ns1:age>
+                <ns1:experience>12</ns1:experience>
+            </ns1:person>
+        </dancers>
+    </performance>
+    
+    
+    
+    
+</dance>

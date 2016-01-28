@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://godzynskyi.com/defaultNameSpaceDance"
+    xmlns="http://godzynskyi.com/defaultNameSpaceDance"
+    xmlns:dancers="http://godzynskyi.com/dancers">
+    <xs:import namespace="http://godzynskyi.com/dancers" schemaLocation="dancers.xsd"/>
+    <xs:element name="dance">
+        <xs:complexType>
+            <xs:sequence maxOccurs="1">
+                <xs:element name="performance" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="type" type="xs:string"/>
+                            <xs:element name="scene" type="Scene"/>
+                            <xs:element name="numberOfDancers" type="NumberOfDancers"/>
+                            <xs:element name="music" type="Music"/>
+                            <xs:element name="dancers" type="dancers:dancers"/>
+                        </xs:all>
+                        <xs:attribute name="number" type="xs:integer" use="required"/>
+                        <xs:attribute name="title" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="NumberOfDancers">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="solo"/>
+            <xs:enumeration value="pair"/>
+            <xs:enumeration value="group"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Scene">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="big"/>
+            <xs:enumeration value="small"/>
+            <xs:enumeration value="hall"/>
+            <xs:enumeration value="open air"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Music">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="live"/>
+            <xs:enumeration value="phonogram"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
